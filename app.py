@@ -5,6 +5,9 @@ import pandas as pd
 with open("model-reg-67130701919.pkl", "rb") as file:
     model = pickle.load(file)
 
+import os
+os.environ["STREAMLIT_WATCHDOG_OBSERVER_TYPE"] = "polling"
+
 # Step 2: Create a new DataFrame
 new_data = pd.DataFrame({
     "youtube": [50],
